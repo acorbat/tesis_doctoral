@@ -1,0 +1,115 @@
+\documentclass[a4paper,11pt,twoside,openright]{report} 
+\input{Settings.tex}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\pagenumbering{roman}
+
+%%%%%%%%%%%%%%%%    Carátula   %%%%%%%%%%%%%%%%%%
+\input{./tex/caratula.tex}
+
+
+%%%%%%%%%%%%%%%%   Resumen    %%%%%%%%%%%%%%%%%%%
+\cleardoublepage
+
+
+\input{./tex/resumen.tex}
+\setcounter{page}{6}
+
+
+%%%%%%%%%%%%%%%%   Frase    %%%%%%%%%%%%%%%%%%%%
+\cleardoublepage
+
+
+\vspace*{15cm}
+
+\begin{flushright}
+    \textit{Nothing in life is to be feared, it is only to be understood.\\Now is the time to understand more so we may fear less.}
+    
+    \textbf{Marie Skłodowska Curie}
+\end{flushright}
+
+
+%%%%%%%%%  Agradecimientos
+\cleardoublepage
+\input{./tex/agradecimientos.tex}
+
+%%%%%%%%%  Dedicatoria
+\cleardoublepage
+\input{./tex/dedicatoria.tex}
+
+%%%%%%%%%%%%%%%%   Índice    %%%%%%%%%%%%%%%%%%%%
+\cleardoublepage
+
+\tableofcontents
+
+%%%%%%%%%%%%%%%    Documento   %%%%%%%%%%%%%%%%%%
+\cleardoublepage
+\setcounter{page}{1}
+\pagenumbering{arabic}
+
+%%%%%%%%%  Introduccion
+\input{./tex/introduccion.tex}
+
+
+%%%%%%%%%  Materiales y Metodos
+\input{./tex/mat_met.tex}
+
+%%%%%%%%%  Biosensores
+\input{./tex/biosensores.tex}
+
+
+%%%%%%%%%  Modelos
+\input{./tex/modelos.tex}
+
+
+%%%%%%%%%  Conclusión
+\input{./tex/conclusion.tex}
+
+
+
+%%%%%%%%%%%%%%
+\thispagestyle{empty}
+
+%%%%%%%%%%%%%%   Referencias   %%%%%%%%%%%%%%%%%%%%%%%%%%
+\cleardoublepage
+\bibliographystyle{apalike}
+\bibliography{./library}
+
+%%%%%%%%%  Conclusión
+\input{./tex/repositorios.tex}
+
+%\begin{figure}[H]
+%    \centering
+%    \includegraphics[width=0.49\textwidth]{resistencia.jpg}
+%    \caption{\footnotesize{Valores de resistencia de la muestra en %función de la temperatura.}}  
+%    \label{figResistencia}
+%\end{figure}
+
+
+%\begin{figure}[H]
+%    \begin{subfigure}{0.49\textwidth}
+%            \includegraphics[width=0.99\textwidth]{zoom2.jpg}
+%            \caption{\footnotesize{Valores obtenidos de resistencia en %función de temperatura en un rango de $82.2$ °K a $82.8$ °K.}}
+%            \label{figZoom2}
+%    \end{subfigure}
+%    
+%    \begin{subfigure}{0.49\textwidth}
+%       \includegraphics[width=0.99\textwidth]{fase2.jpg}
+%        \caption{\footnotesize{Valores de fase obtenidos en función de %temperatura en un rango de $82.2$ °K a $82.8$ °K.}}
+%        \label{figFase2}
+%    \end{subfigure}
+%
+%    \caption{\footnotesize{Detalle de resistencia y fase medidas para la región de interes de $82.2$ °K a $82.8$ °K.}}
+%    \label{figZona2}
+%\end{figure}
+
+
+%\begin{thebibliography}{10}
+
+
+%\end{thebibliography}
+
+
+\end{document}

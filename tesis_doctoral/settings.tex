@@ -1,0 +1,104 @@
+%paquetes
+
+\usepackage{graphicx}
+\usepackage[spanish]{babel} % option es-lcroman para numeros romanos en minuscula
+\usepackage[utf8]{inputenc}
+\usepackage{textcomp}
+\usepackage{float}
+\usepackage[labelfont=bf, textfont=normal,
+			justification=justified,
+			singlelinecheck=false]{caption}
+\usepackage[labelfont=bf, textfont=normal,
+			justification=justified,
+			singlelinecheck=false]{subcaption}
+\usepackage{multirow}
+\usepackage{amsmath}
+%\usepackage{subfig}
+%\usepackage[retainorgcmds]{IEEEtrantools} %% Esto es para insertar links a páginas web.
+\usepackage{multicol}
+\usepackage[table]{xcolor} %para pintar celdas con el comando \cellcolor{red}
+\usepackage{hyperref} % para poner liks dentro y fuera del documento con el comando \href{<my_url>}{<description>}. Buscar mas funcionalidades.
+\usepackage[noabbrev, nameinlink, spanish]{cleveref} % para que agregue tipo a la referencia (figura, ec, etc)
+
+\hypersetup{colorlinks, citecolor=black,
+   		 	filecolor=black, linkcolor=black,
+    		urlcolor=black}
+\usepackage[version=4]{mhchem} % Para graficar reacciones químicas
+
+\usepackage{seqsplit} % package for splitting long strings of characters link, DNA, mRNA, Proteins, numbers, etc.
+
+%agregar notas al pdf
+\usepackage{todonotes}
+\presetkeys{todonotes}{inline}{}
+
+% Lenguajes de Programacion
+%\usepackage[]{mcode} % paquete para agregar código de MatLab. Es necesario copiar el mcode.sty https://www.sharelatex.com/project/5539017293616a9c19e2cd24
+%\usepackage{listings} %para incluir varios lenguajes de programacion (Ej: Python)
+
+\usepackage{natbib} % take out square brackets from apalike citation
+
+% Caracteristicas de paginas
+
+\usepackage[top=3cm, bottom=3cm,
+			inner=2cm, outer=1.5cm]{geometry}			% Page margin lengths
+
+%\pdfpagewidth 8.5in
+%\pdfpageheight 11in
+%\setlength\oddsidemargin{-0,21in}
+%\setlength\evensidemargin{-0,21in}
+%\setlength\topmargin{-2cm}
+%\setlength\textwidth{7in}
+%\setlength\textheight{23.7cm}
+\setlength\parskip{0.1in}
+
+
+% Caracteristicas de estilo
+
+%\usepackage{setspace}
+%\onehalfspacing
+
+% Cambiar nombre de tablas
+
+\renewcommand{\listtablename}{Indice de tablas}
+	\renewcommand{\tablename}{Tabla}
+
+
+% Formato de los títulos de capítulos
+\usepackage{titlesec}		
+\titleformat{\chapter}[display]
+  {\Huge\bfseries\filcenter}
+  {{\fontsize{50pt}{1em}\vspace{-4.2ex}\selectfont \textnormal{\thechapter}}}{1ex}{}[]
+  
+% Paquete para agregar apéndices
+\usepackage[header, title, titletoc]{appendix}
+%\renewcommand{\appendixname}{Apéndice}
+
+
+% Cabeza y pie de página (Select TWOSIDE or ONESIDE layout below)
+\usepackage{fancyhdr}								
+\pagestyle{fancy}
+\setlength{\headheight}{15pt}
+\renewcommand{\chaptermark}[1]{\markboth{\thechapter.\space#1}{}} 
+
+
+% Select one-sided (1) or two-sided (2) page numbering
+\def\layout{2}	% Choose 1 for one-sided or 2 for two-sided layout
+% Conditional expression based on the layout choice
+\ifnum\layout=2	% Two-sided
+    \fancyhf{}			 						
+	\fancyhead[LE,RO]{\nouppercase{ \leftmark}}
+	\fancyfoot[LE,RO]{\thepage}
+	\fancypagestyle{plain}{			% Redefine the plain page style
+	\fancyhf{}
+	\renewcommand{\headrulewidth}{0pt} 		
+	\fancyfoot[LE,RO]{\thepage}}	
+\else			% One-sided  	
+  	\fancyhf{}					
+	\fancyhead[C]{\nouppercase{ \leftmark}}
+	\fancyfoot[C]{\thepage}
+\fi
+
+
+% Defino Funciones comunes
+
+\newcommand{\ening}[1]{\textit{#1}}
